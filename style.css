@@ -1,0 +1,115 @@
+html{
+    background-color: rgb(22, 22, 36);
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(49, 49, 43);
+}
+
+/*home page slider img side*/
+.img-ht{
+    height: 40vw;
+}
+
+.section-title{
+    font-weight: bolder;
+    color: tomato;
+}
+
+/*discount area*/
+.dicount-area{   
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.dicount-card{
+    border:2px solid green;
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px;
+    
+}
+.dis-img img{
+    width: 100%;
+}
+.dicount-card:hover .dis-img img{
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+.dicount-card:hover .dis-card-title{
+    display: block;
+}
+.dis-card-title{
+    display: none;
+    position: absolute;
+    top: 0;
+    color: rgb(32, 102, 43);
+}
+
+/*order card area*/
+.content-margin{
+    margin-bottom: 20px;
+}
+.content-card-img{
+    padding: 10px;
+    position: relative;
+    top: -40px;
+    z-index: 1;
+}
+.text-body{
+    position: relative;
+    margin-top: -200px;
+    visibility: hidden;
+}
+.content-card-img img{
+    border-radius: 5px;
+}
+.content-card-body:hover{
+    background-color: yellow;
+}
+.content-card-body:hover .text-body{
+    background-color: yellow;
+    margin-top: -50px;
+    visibility: visible;
+}
+.content-card-body:hover .card-footer{
+    visibility: visible;
+}
+.card-footer{
+    visibility: hidden;
+}
+.content-card-body{
+    position: relative;
+    box-shadow: 15px 15px 20px rgb(37, 25, 25);
+}
+/*service area*/
+.service-layout{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+.resturen-ser-info,.nav-link,.extra-info{
+    width: 100%;
+}
+.nav-link a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+@media(max-width:900px){
+    .content-margin{
+        margin-bottom: 90px;
+    }
+    .dicount-area{   
+        grid-template-columns: repeat(1,1fr);        
+    }
+    .service-layout{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
